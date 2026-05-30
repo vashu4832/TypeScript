@@ -1,1 +1,1 @@
-{"root":["./a.ts"],"version":"6.0.3"}
+{"root":["./a.d.ts","./src/a.ts"],"version":"6.0.3"}
