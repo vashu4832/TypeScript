@@ -1,13 +1,9 @@
 import { prisma } from "./lib/prisma.js";
-async function updateUser(username, { firstName, lastName }) {
-    const result = await prisma.user.update({
-        where: { username },
-        data: {
-            firstName,
-            lastName
-        }
+async function deleteUser(username) {
+    const res = await prisma.user.delete({
+        where: { username }
     });
+    console.log(res);
 }
-const res = updateUser("ashu@gmail.com", { firstName: "Harkirat", lastName: "Singh" });
-console.log(res);
+deleteUser("ashu@gmail.com");
 //# sourceMappingURL=index.js.map
